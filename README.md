@@ -1,5 +1,5 @@
 # What is Machine Learning, *really*?
-### By Adam Raveret
+#### By Adam Raveret
 
 ### Introduction
 The terms “Artificial Intelligence” and “Machine Learning” were coined way back in the 1950s, but recent increases in processing power have made the terms more relevant now than ever. Computers have beaten the best humans in the world at complex games like Chess and Go, cars are on the verge of driving themselves, and it all seems to be due to the magic of “Machine Learning.” Senior research scientist at Google, Greg Corrado, says “It’s not magic. It’s just a really important tool” that will soon permeate most aspects of society. But as nice as it would be to doze off during our morning commutes, others warn against the threats that come with AI. President Obama released a report in October of 2016 discussing the potential impact it could have on our labor force, and Elon Musk continually makes known his opinion that AI poses an “existential threat” to civilization. But before we judge its efficacy, what exactly do these terms mean?
