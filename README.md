@@ -15,19 +15,19 @@ They both center around the idea of computers simulating “smart” actions, but di
 ### Example
 Suppose we want to develop a program to play tic-tac-toe optimally. Because of the simplicity of the game, we could likely hard code the optimal response to each combination of moves, but it would be a painstaking process. Alternatively, we could use Machine Learning to create the ultimate player. First we would first import the parameters of the game: create the board, the win scenarios, the alternating turns, and method of selecting a space. Later we will use data to inform our selections, but since I have thrown out all those cocktail napkins, we’ll have to start with random selections. 
 
-**Step 1.** Below is an example of each turn of play and an example of how you might store that game’s data (lines 8 – 114 in the code). Notice in the data that a winning result is recorded as a 1 for each move after the game is completed. 
+**Step 1.** Below is an example of each turn of play and an example of how you might store that game’s data (lines 8 – 148 in the code). Notice in the data that a winning result is recorded as a 1 for each move after the game is completed. 
 
 ![alt text](https://github.com/araveret/tic_tac_toe_sim/blob/master/images/step_1.png "Step 1 Image")
 
-**Step 2.** Now we’ll simulate 1000 games using random selections and store the data as our training set for future simulations. Below is the distribution of results and the means of the result across each of the first selections (lines 115 – 216). Notice that when randomizing selections, a win occurs twice as often as as a loss and 6 times as often as a draw. Also notice that all first selections average above 0.5, meaning they are most likely to result in a win, with the middle spot resulting in a win most often. 
+**Step 2.** Now we’ll simulate 1000 games using random selections and store the data as our training set for future simulations. Below is the distribution of results and the means of the result across each of the first selections (lines 149 – 157). Notice that when randomizing selections, a win occurs twice as often as as a loss and 6 times as often as a draw. Also notice that all first selections average above 0.5, meaning they are most likely to result in a win, with the middle spot resulting in a win most often. 
 
 ![alt text](https://github.com/araveret/tic_tac_toe_sim/blob/master/images/step_2.png "Step 2 Image")
 
-**Step 3.** We’ll simulate another 1000 games, but this time instead of randomizing the selections, we’ll use the data from our previous simulations to inform the selections. Situations that resulted in a win in the past will be prioritized, while situations that resulted in a loss will be avoided. Below is again the distribution of results and the mean of the results across each first selection (lines 217 – 327). The top results are for this 1000 games, the bottom results are for the cumulative 2000 games. Notice how different these results are from the randomized selections. Also notice that the majority of games are ending in a draw.
+**Step 3.** We’ll simulate another 1000 games, but this time instead of randomizing the selections, we’ll use the data from our previous simulations to inform the selections. Situations that resulted in a win in the past will be prioritized, while situations that resulted in a loss will be avoided. Below is again the distribution of results and the mean of the results across each first selection (lines 158 – 169). The top results are for this 1000 games, the bottom results are for the cumulative 2000 games. Notice how different these results are from the randomized selections. Also notice that the majority of games are ending in a draw.
 
 ![alt text](https://github.com/araveret/tic_tac_toe_sim/blob/master/images/step_3.png "Step 3 Image")
 
-**Step 4.** We’ll simulate another 1000 games using our cumulative training set to inform our selections, and again display the results below (lines 328 - 438). Notice how the most recent simulations as well as the cumulative set both converge to 0.5. 
+**Step 4.** We’ll simulate another 1000 games using our cumulative training set to inform our selections, and again display the results below (lines 170 - 181). Notice how the most recent simulations as well as the cumulative set both converge to 0.5. 
 
 ![alt text](https://github.com/araveret/tic_tac_toe_sim/blob/master/images/step_4.png "Step 4 Image")
 
