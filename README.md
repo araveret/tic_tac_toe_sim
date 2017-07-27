@@ -17,6 +17,7 @@ They both center around the idea of computers simulating “smart” actions, but di
 
 ### Example
 Suppose we want to develop a program to play Tic-Tac-Toe optimally. Because of the simplicity of the game, we could likely hard code the optimal response to each combination of moves, but it would be a painstaking process. Alternatively, we could use Machine Learning to create the ultimate player. First we would import the parameters of the game: create the board, the win scenarios, the alternating turns, etc. Since we don’t have any game data collected (I must have thrown out all those old cocktail napkins), at first our move will be at random. Once we have enough examples of play, we will later use those outcomes to inform our selections. 
+
 **Step 1.** Below are two images. On the left is an example of what our board looks like after each turn of play – each available space labeled with a number between 0-8 and marked with an “X” or “O” once selected. And on the right is an example of how we will store that game’s data – a “result” column recording the game outcome with 0 for a loss, 0.5 for a draw, or 1 for a win; a “sit” column marking the unique situation or combination of moves at that point in the game; and a “turn” column marking a turn count starting at 0. Lines 8 – 148 in the [code](https://github.com/araveret/tic_tac_toe_sim/blob/master/tic_tac_toe_sim.py).
 
 ![alt text](https://github.com/araveret/tic_tac_toe_sim/blob/master/images/image1.png "Step 1 Image")
